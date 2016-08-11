@@ -73,20 +73,28 @@
         return  @(userName.length > 0 && pwdStr.length > 0);
     }];
     RAC(button,enabled) = lcombineSignal;
+    
 }
 
 
 -(void)testUserName:(NSString *)name  ages:(NSString *)ages{
-    NSLog(@">>>>>>%@----%@",name,ages);
-    if (self.reduceBlock) {
-        self.reduceBlock(name,ages);
-    }
-
+    NSLog(@"1:>>>>>>%@----%@",name,ages);
+   
+    
 }
 
 -(void)setReduceBlock:(reduceChange)reduceBlock {
     _reduceBlock = [reduceBlock copy];
 
+}
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        
+    }
+    return self;
 }
 
 @end
